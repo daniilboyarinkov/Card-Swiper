@@ -1,38 +1,129 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* ------------ */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.Container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Card {
+  touch-action: pan-y;
+  background-color: white;
+  /* Needed for bc img */
+  /* background-size: auto 85%; */
+  /* background-repeat: no-repeat; */
+  /* background-position: center center; */
+  font-size: 10rem;
+  width: 45vh;
+  max-width: min(300px, 100vw);
+  height: 75vh;
+  max-height: min(570px, 100vh);
+  border-radius: 0.8rem;
+  border: 0.1rem solid #efefef;
+
+  box-shadow: 0 10px 50px -10px #aaaaaa44, 0 10px 10px -10px #ffffff33;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ------------ */
+
+.Table {
+  filter: opacity(80%);
+
+  background-color: #333;
+  border: 0.1rem solid #3e3e3e;
+  border-radius: 1rem;
+  width: 98vw;
+  height: 100vh;
+  position: absolute;
+  bottom: -12%;
+  left: 50%;
+  transform: translateX(-50%) rotateX(45deg);
+  perspective: 2000px;
+  z-index: -1;
+}
+
+/* ------------ */
+
+.Wrapper {
+  position: absolute;
+  width: 100%;
+  top: 2%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.CancelSvg {
+  width: 100px;
+  height: 100px;
+}
+
+.OkSvg {
+  width: 100px;
+  height: 100px;
+}
+
+.LayoutTitle {
+  top: 50%;
+  position: absolute;
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.CancelTitle {
+  left: 30%;
+}
+
+.OkTitle {
+  left: 55%;
+}
+
+/* ------------ */
+
+.CardInfoWrapper {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000066;
+}
+
+.CardInfo {
+  background-color: #222222fd;
+  width: 680px;
+  height: 85%;
+  position: relative;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 860px) {
+  .CardInfo {
+    width: 350px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.Cross {
+  position: absolute;
+  top: 1%;
+  right: 2%;
+  transition: scale 0.2s ease;
+}
+
+.Cross:hover {
+  scale: 1.1;
 }
