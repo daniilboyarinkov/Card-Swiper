@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Card-Swiper/static/css/main.0ddad33a.css",
+    "main.js": "/Card-Swiper/static/js/main.abd3fbc2.js",
+    "index.html": "/Card-Swiper/index.html",
+    "main.0ddad33a.css.map": "/Card-Swiper/static/css/main.0ddad33a.css.map",
+    "main.abd3fbc2.js.map": "/Card-Swiper/static/js/main.abd3fbc2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ddad33a.css",
+    "static/js/main.abd3fbc2.js"
+  ]
+}
